@@ -14,3 +14,36 @@ In theory you can plug this adapter to any switch and run it.
 
 Many thanks to the RP2040-CE community for developping the wonderful firmware that would be needed for this project. 
 And to my brother who wrote the software for this device.
+
+How to build
+
+Get the required parts first.
+26　3mm 2.2vLED (Any color would do)
+
+26　1/6 100KΩ resistor
+
+54　1/6 1KΩ resistor
+
+1　  3386P-1-103 1KΩ potentiometer
+
+1　  Switch
+
+26　 6x6mm 4pin tactical swtich
+
+2　  RP2040 pico (Type C variant would be best)
+
+1   Custom PCB (You could build this by hand on a universal PCB but it's going to take forever.)
+
+Check the release tab for the PCB files
+
+<img width="1742" height="665" alt="Screenshot_20260509_174313" src="https://github.com/user-attachments/assets/10292ef1-3559-4d4d-87fb-5e0ea38b9d66" />
+
+<img width="3508" height="2480" alt="Controller adapter tool assistaed board_annotated" src="https://github.com/user-attachments/assets/2d39d9b7-5b11-498d-928a-a5f3ff6e4d4d" />
+
+After solding all the parts, flash the Right side pico with the RP2040-CE firmware. 
+
+Do a check on all the GPIO pins to make sure it's working
+
+Flash **
+
+WIP
