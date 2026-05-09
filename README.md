@@ -25,9 +25,11 @@ Get the required parts first.
 
 54　1/6 1KΩ resistor
 
+26  2N7000 TO92 N transistor
+
 1　  3386P-1-103 1KΩ potentiometer
 
-1　  Switch
+1　  PCB Switch
 
 26　 6x6mm 4pin tactical swtich
 
