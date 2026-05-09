@@ -18,6 +18,7 @@ And to my brother who wrote the software for this device.
 How to build
 
 Get the required parts first.
+
 26　3mm 2.2vLED (Any color would do)
 
 26　1/6 100KΩ resistor
