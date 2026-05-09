@@ -9,11 +9,15 @@ Added LEDs and bypass switches for Debugging if needed. The LED brightness can b
 The RP2040 connecting to the pc needs a dedicated software to read images and input it to the pc.  *thinking of adding support for reading pre made tool assisted files for easier exicution without pc.
 
 I hope that this simple project would be helpful to al who wish to push the limits of the switch on offical hardware. With no modification.
-In theory you can plug this adapter to any switch and run it.
+In theory you can plug this adapter to any switch and run it. And send input from the PC thus adding support for unsupported hardware to work on the switch.
+
 
 
 Many thanks to the RP2040-CE community for developping the wonderful firmware that would be needed for this project. 
 And to my brother who wrote the software for this device.
+
+Shout out to the GIMX community for giving me inspiration for the way this device works.
+Although the GIMX project has quite down, their passions passes though.
 
 How to build
 
@@ -44,6 +48,8 @@ Check the release tab for the PCB files
 <img width="3508" height="2480" alt="Controller adapter tool assistaed board_annotated" src="https://github.com/user-attachments/assets/2d39d9b7-5b11-498d-928a-a5f3ff6e4d4d" />
 
 After solding all the parts, flash the Right side pico with the RP2040-CE firmware. 
+
+https://gp2040-ce.info/
 
 Do a check on all the GPIO pins to make sure it's working
 
