@@ -31,7 +31,7 @@ Get the required parts first.
 
 26  2N7000 TO92 N transistor
 
-1　  3386P-1-103 1KΩ potentiometer
+1　  3386P-1-103 1KΩ potentiometer (can be a smaller value)
 
 1　  PCB Switch
 
@@ -72,5 +72,10 @@ You'll need to diable all the addons to be able to use all the pins.
 There's a quiurk, on GP0 GP1.  You need to enter the "Peripheral Mapping" tab and enable I2C0, make sure both SDA and SCL is set to "Unset"
 Enter RGB LED Config and set the "Data GPIO PIN" to -1
 And enter the Add-Ons config tab and disable all. (Depends on your use case)
+Next Go to add-on trubo config. Turn on and set LED off or -1.
+
 After saving and rebooting, you can configure the GPIO Pin Mapping to your liking.
 The PCB is wired as GP0-GP0.  GP1-GP1 etc....  
+
+Remember. You need to set the GPIO to any input or else the LED debug will be on. Even after setting the GPIO to any input and the LED is on. Double check your soldering and wiring quality.
+
