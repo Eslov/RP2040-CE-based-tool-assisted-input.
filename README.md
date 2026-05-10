@@ -56,3 +56,21 @@ Do a check on all the GPIO pins to make sure it's working
 Flash **
 
 WIP
+
+
+
+
+
+After building the device, Press S2 while plugging in the USB to load to the web config tool.
+
+S2 is second right from the most buttom left button.
+
+
+
+You'll need to diable all the addons to be able to use all the pins.
+
+There's a quiurk, on GP0 GP1.  You need to enter the "Peripheral Mapping" tab and enable I2C0, make sure both SDA and SCL is set to "Unset"
+Enter RGB LED Config and set the "Data GPIO PIN" to -1
+And enter the Add-Ons config tab and disable all. (Depends on your use case)
+After saving and rebooting, you can configure the GPIO Pin Mapping to your liking.
+The PCB is wired as GP0-GP0.  GP1-GP1 etc....  
