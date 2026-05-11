@@ -19,7 +19,7 @@ And to my brother who wrote the software for this device.
 Shout out to the GIMX community for giving me inspiration for the way this device works.
 Although the GIMX project has quite down, their passions passes though.
 
-How to build
+#How to build
 
 Get the required parts first.
 
@@ -69,18 +69,17 @@ The PCB is wired as GP0-GP0.  GP1-GP1 etc....
 
 Remember. You need to set the GPIO to any input or else the LED debug will be on. Even after setting the GPIO to any input and the LED is on. Double check your soldering and wiring quality.
 
-(For testing the left side pico)
+#(For testing the left side pico)
 
 Now flash the left side pico with Micropython. https://micropython.org/download/RPI_PICO/
 
 After flashing it, write this code in.
 (Used AI for the simple testing only)
 
-「
-from machine import Pin
+```python
+code: from machine import Pin
 from time import sleep_ms, ticks_ms
 
-# GPIO list
 pins = [
     0, 1, 2, 3, 4, 5, 6, 7,
     8, 9, 10, 11, 12, 13, 14, 15,
@@ -90,7 +89,6 @@ pins = [
 
 gpio = []
 
-# Setup all GPIO as outputs LOW initially
 for p in pins:
     pin = Pin(p, Pin.OUT)
     pin.value(0)
@@ -98,8 +96,6 @@ for p in pins:
 
 pin_count = len(gpio)
 
-# Total cycle time = 1000 ms
-# Each pin ON time:
 step_time = int(1000 / pin_count)
 
 while True:
@@ -121,7 +117,8 @@ while True:
 
     if elapsed < 1000:
         sleep_ms(1000 - elapsed)
-  *」
+```
+
 
 Plug both Pico into the pc and run the code.
 Open a Controller tester of your choice
