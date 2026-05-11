@@ -128,3 +128,4 @@ We have fnished building the GP2040-CE base tool.
 
 You can config the GP2040-CE side pico to your liking. And download any software that you need to use for your required purpose.
 
+If anyone want's to create a software for this tool. feel free to do so.
