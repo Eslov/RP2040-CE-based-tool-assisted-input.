@@ -19,7 +19,7 @@ And to my brother who wrote the software for this device.
 Shout out to the GIMX community for giving me inspiration for the way this device works.
 Although the GIMX project has quite down, their passions passes though.
 
-#How to build
+# How to build
 
 Get the required parts first.
 
@@ -69,7 +69,7 @@ The PCB is wired as GP0-GP0.  GP1-GP1 etc....
 
 Remember. You need to set the GPIO to any input or else the LED debug will be on. Even after setting the GPIO to any input and the LED is on. Double check your soldering and wiring quality.
 
-#(For testing the left side pico)
+# (For testing the left side pico)
 
 Now flash the left side pico with Micropython. https://micropython.org/download/RPI_PICO/
 
