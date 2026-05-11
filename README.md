@@ -53,19 +53,9 @@ https://gp2040-ce.info/
 
 Do a check on all the GPIO pins to make sure it's working
 
-Flash **
-
-WIP
-
-
-
-
-
 After building the device, Press S2 while plugging in the USB to load to the web config tool.
 
-S2 is second right from the most buttom left button.
-
-
+S2 is third right from the most buttom left button.
 
 You'll need to diable all the addons to be able to use all the pins.
 
@@ -78,4 +68,66 @@ After saving and rebooting, you can configure the GPIO Pin Mapping to your likin
 The PCB is wired as GP0-GP0.  GP1-GP1 etc....  
 
 Remember. You need to set the GPIO to any input or else the LED debug will be on. Even after setting the GPIO to any input and the LED is on. Double check your soldering and wiring quality.
+
+(For testing the left side pico)
+
+Now flash the left side pico with Micropython. https://micropython.org/download/RPI_PICO/
+
+After flashing it, write this code in.
+(Used AI for the simple testing only)
+
+「
+from machine import Pin
+from time import sleep_ms, ticks_ms
+
+# GPIO list
+pins = [
+    0, 1, 2, 3, 4, 5, 6, 7,
+    8, 9, 10, 11, 12, 13, 14, 15,
+    16, 17, 18, 19, 20, 21,
+    22, 26, 27, 28
+]
+
+gpio = []
+
+# Setup all GPIO as outputs LOW initially
+for p in pins:
+    pin = Pin(p, Pin.OUT)
+    pin.value(0)
+    gpio.append(pin)
+
+pin_count = len(gpio)
+
+# Total cycle time = 1000 ms
+# Each pin ON time:
+step_time = int(1000 / pin_count)
+
+while True:
+
+    cycle_start = ticks_ms()
+
+    for pin in gpio:
+
+        # MOSFET ON
+        pin.value(1)
+
+        sleep_ms(step_time)
+
+        # MOSFET OFF
+        pin.value(0)
+
+    # Optional timing correction
+    elapsed = ticks_ms() - cycle_start
+
+    if elapsed < 1000:
+        sleep_ms(1000 - elapsed)
+  *」
+
+Plug both Pico into the pc and run the code.
+Open a Controller tester of your choice
+The Debugging LEDS should be flashing very fast, and the controller testing should be going crazy.
+
+We have fnished building the GP2040-CE base tool.
+
+You can config the GP2040-CE side pico to your liking. And download any software that you need to use for your required purpose.
 
